@@ -23,7 +23,6 @@ const Login = () => {
     if (issignin) {
       //Sign in Form
       const message = checkvalid(null, email.current.value, password.current.value, null, null, true);
-      console.log(message);
       seterrormessage(message);
 
       //Firebase Logic for Authenthication
@@ -31,8 +30,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
-          console.log(user);
-         // navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -52,14 +49,12 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
-          console.log(user);
           
           //update Profile with full name and photourl
           updateProfile(auth.currentUser, {
             displayName: fullname.current.value, photoURL: photo_url,
           }).then(() => {
             const { uid, email, displayName, photoURL } = auth.currentUser;
-            console.log(uid);
             dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
           }).catch((error) => {
             // An error occurred
