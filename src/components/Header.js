@@ -48,12 +48,15 @@ const Header = () => {
         <img src={logo} className="w-56 px-5 bg-gradient-to-b from-black " alt="logo" />
       </div>
       {/*Nav_Items */}
-     <div className="space-x-28">
-        <button className="rounded-md text-white text-lg underline "><Link to={"/browse"}>Home</Link></button>
-        <button className="rounded-md text-white text-lg underline "><Link to={"/browse"}>Search</Link></button>
-        <button className="rounded-md text-white text-lg underline "><Link to={"/browse"}>Help us</Link></button>
-        <button className="rounded-md text-white text-lg underline "><Link to={"/watchlist"}>WatchList({watchlist.length})</Link></button>
+      {user&&
+        <div className="space-x-28">
+        <button className="rounded-md  text-white text-xl underline "><Link to={"/browse"}>Home</Link></button>
+        <button className="rounded-md text-white text-xl underline "><Link to={"/search"}>Search</Link></button>
+        <button className="rounded-md text-white text-xl underline "><Link to={"/browse"}>Help us</Link></button>
+        <button className="rounded-md text-white text-xl underline "><Link to={"/watchlist"}>WatchList({watchlist.length})</Link></button>
      </div>
+      }
+     
       {/*User */}
       <div>
         {user && (

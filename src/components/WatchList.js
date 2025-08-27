@@ -20,7 +20,7 @@ const WatchList = () => {
             <Header />
             <div className="px-10 space-x-16 flex pt-32">
                 {
-                    list.length==0&&(
+                    list.length===0&&(
                         <p className="p-2 m-2 text-lg text-lime-50 ">Add Your Favourite Movies You Want to Watch!!</p>
                     )
                 }
@@ -32,7 +32,11 @@ const WatchList = () => {
                         </>)
                 }
             </div>
-            <div className="flex pt-6 px-10 flex-wrap">
+            {list.length>0 && <h1 className="text-2xl px-12 pt-5 font-semibold">Your Favourite Movies {">"}</h1>}
+            
+            <div className="flex bg-[#3e0000]">
+                
+                    <div className="flex pt-2 px-10 flex-wrap">
                 {
                     list.map((movie) => (
                         <div key={movie.key} className="p-2 m-2">
@@ -42,6 +46,7 @@ const WatchList = () => {
 
                     ))
                 }
+            </div>
             </div>
         </div>
     );

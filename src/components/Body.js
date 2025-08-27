@@ -5,6 +5,7 @@
   import Error from "./Error";
   import MovieDetails from "./MovieDetails";
 import WatchList from "./WatchList";
+import Search from "./Search";
   const Body = () => {
     const approuter=createBrowserRouter([
       {
@@ -22,6 +23,10 @@ import WatchList from "./WatchList";
       {
         path:"/watchlist",
         element:<WatchList/>,
+      },
+      {
+        path:"/search",
+        element:<Search/>,
       },
       {
         path:"*",

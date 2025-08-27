@@ -29,7 +29,7 @@ const MovieDetails = () => {
         <Header/>
           {
                     click&&(
-                       <div className="absolute w-screen">
+                       <div className="absolute w-screen h-screen">
                             <div className="text-right pr-24 ">
                                 <button className="rounded-lg absolute p-5 m-4  bg-[#3e0000] text-white text-lg z-20" onClick={handleclick}>✕</button>
                             </div>
@@ -39,11 +39,11 @@ const MovieDetails = () => {
                 }
         <div className="bg-[#3e0000] w-screen py-28 text-white">
             <div className="px-10">
-                <h1 className="text-3xl font-semibold">{details.original_title}{"  "}({details.tagline})</h1>
+                <h1 className="text-3xl font-semibold">{details.title}{"  "}({details?.tagline})</h1>
                 <h1 className="text-xl pt-3">{details.release_date}{" "}{details.runtime+" "+"mins"}</h1>
                 <p>★{details.vote_average}</p>
                 <div className="flex">
-                    <img className="w-[400px] py-5 " src={bg_card_img+details.poster_path} />
+                    <img className="w-[400px] py-5 " src={bg_card_img+details?.poster_path} />
                     <div className="px-44 pt-5">
                         <div>
                             {

@@ -70,6 +70,12 @@
         - Show Cards Which User Select Movies
         - Create 3 Buttons Add,Remove,Clear
 
+    # SearchPage
+        - Input Box its return value of user input using useref hook
+        - Click on Search Button then Call api in dependecy array parameter handleclick
+        - Store Data in redux store usin new slice (bug: check a Name )
+        - Reuse moviecard Component
+        - then click Redirect Moviedetails Page
 # Features
     # Loign Page
         - Sign in 
