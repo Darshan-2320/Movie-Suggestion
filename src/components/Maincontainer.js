@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 const Maincontainer = () => {
   const movie=useSelector((store)=>store.movie.popular);
   if(!movie) return null;
-  const mainmovie=movie[8];
+  const mainmovie=movie[6];
   const {original_title,overview,vote_average}=mainmovie;
   return (
     <div>

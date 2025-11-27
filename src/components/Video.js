@@ -4,7 +4,7 @@ import useTrailer from "../utils/Hooks/useTrailer";
 
 const Video = () => {
   const movie=useSelector((store)=>store.movie.popular);
-  useTrailer(movie[8]);
+  useTrailer(movie[4]);
   const trailer = useSelector((store) => store.movie.trailer);
   return (
     <div className="w-screen">

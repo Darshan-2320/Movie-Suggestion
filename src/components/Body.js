@@ -6,6 +6,7 @@
   import MovieDetails from "./MovieDetails";
 import WatchList from "./WatchList";
 import Search from "./Search";
+import Helpus from "./Helpus";
   const Body = () => {
     const approuter=createBrowserRouter([
       {
@@ -27,6 +28,10 @@ import Search from "./Search";
       {
         path:"/search",
         element:<Search/>,
+      },
+      {
+        path:"/helpus",
+        element:<Helpus/>,
       },
       {
         path:"*",

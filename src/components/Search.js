@@ -34,7 +34,7 @@ const Search=()=>{
             <Header/>
             <div className="pt-36 ">
                 <form className="flex pl-[28rem]"  onSubmit={(e)=>e.preventDefault()}>
-                    <input type="text" placeholder="Which Type You Want Watch Movie?" ref={data} className="bg-teal-50 w-[28rem] p-4 m-4 rounded-md text-black text-xl placeholder-slate-950"/>
+                    <input type="text" placeholder="Which Movie do you Want to see?" ref={data} className="bg-teal-50 w-[28rem] p-4 m-4 rounded-md text-black text-xl placeholder-slate-950"/>
                     <button type="submit" onClick={handleclick} className="m-4 p-4 px-5 rounded-md bg-teal-50 text-black text-xl">Search</button>
                 </form>
                 
